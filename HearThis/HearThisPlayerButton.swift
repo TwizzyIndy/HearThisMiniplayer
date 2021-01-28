@@ -53,7 +53,7 @@ extension HearThisPlayerButton {
     fileprivate func enterIsLoading() {
         self.activityIndicator?.removeFromSuperview()
 
-        let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
+        let activityIndicator = UIActivityIndicatorView(style: .whiteLarge)
         activityIndicator.frame = self.bounds
         activityIndicator.startAnimating()
         self.setImage(nil, for: .normal)

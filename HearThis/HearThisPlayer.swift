@@ -46,7 +46,7 @@ class HearThisPlayer: HearThisPlayerType {
         self.notificationCenter = notificationCenter
         self.audioSession = audioSession
         
-        player.addBoundaryTimeObserver(forTimes: [CMTime(seconds: 0.001, preferredTimescale: 1000) as NSValue], queue: nil, using:{
+        player.addBoundaryTimeObserver(forTimes: [NSValue(time:CMTime(seconds: 0.001, preferredTimescale: 1000))], queue: nil, using:{
             if let currentTrack = self.currentTrack {
                 self.trackdDidStartPlaying(track: currentTrack)
             }
@@ -91,7 +91,7 @@ class HearThisPlayer: HearThisPlayerType {
         player.replaceCurrentItem(with: item)
         player.play()
         do {
-            try audioSession.setCategory(AVAudioSessionCategoryPlayback)
+            try audioSession.setCategory(AVAudioSession.Category.playback)
             do {
                 try audioSession.setActive(true)
             } catch let error as NSError {

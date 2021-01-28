@@ -70,7 +70,7 @@ class ArtistsListDatasource {
                 self.tableView?.reloadData()
             })
             if let section1Populator = OFASectionPopulator(parentView: tableView, dataProvider: dataProvider, cellIdentifier: {
-                _ in
+                _,_  in
                 return "Cell1"
             }, cellConfigurator: {
                 obj, cellView, indexPath in

@@ -24,7 +24,7 @@ class StartViewController: UIViewController, HearThisPlayerHolder {
         minPlayerHightConstraint.constant = 0
         miniPlayerBottom.constant = 0
 
-        for childViewController in self.childViewControllers {
+        for childViewController in self.children {
             if let playerHolder = childViewController as? HearThisPlayerHolder {
                 playerHolder.hearThisPlayer = self.hearThisPlayer
             }

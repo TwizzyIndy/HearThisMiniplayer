@@ -29,7 +29,7 @@ class HearThisPlayerViewController: UIViewController, HearThisPlayerHolder  {
 }
 
 extension HearThisPlayerViewController {
-    func playerButtonTapped(sender: Any) {
+    @objc func playerButtonTapped(sender: Any) {
         switch playButton.playerState {
         case .playing:
             hearThisPlayer?.stop()

@@ -83,7 +83,7 @@ class ArtistDetailDataSource {
         
         if let section1Populator = OFASectionPopulator(parentView: self.tableView,
                                                        dataProvider: dataProvider,
-                                                       cellIdentifier: {_ in return "Cell1"},
+                                                       cellIdentifier: {_,_  in return "Cell1"},
                                                        cellConfigurator:
             {
             [weak self]
